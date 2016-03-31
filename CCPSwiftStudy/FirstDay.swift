@@ -130,5 +130,50 @@ class FirstDay: NSObject {
         let fullName:String = "John"
         let informalGreeting = "hi\(nickName ?? fullName)"
         print(informalGreeting)
+        
+        //switch支持任意类型的数据和各种类型的比较操作
+        let vegetable = "red pepper"
+        switch vegetable {
+        case "celery":
+            print("Add some raisins and make ants on a log")
+        case "cucumber","watercress":
+            print("That would make a good tea sandwich")
+        case let x where x.hasSuffix("pepper"):
+            print("Is it a spicy \(x)?")
+        default:
+            print("Everything tastes good in soup")
+        }
+        
+        //for-in
+        let interestingNumbers = ["Prime":[1,35,8,46],"Fibonacci":[2,5,7,9,6,5],"Square":[55,44,99,66]]
+        var largest = 0
+        for (_,numbers) in interestingNumbers {
+            for number in numbers {
+                if number > largest {
+                    largest = number;
+                }
+            }
+        }
+        print(largest)
+        
+        //while repeat-while
+        var n = 2
+        while n < 100 {
+            n = n * 2
+        }
+        print(n)
+        
+        var m = 2
+        repeat {
+        m = m * 2
+        } while m < 100
+        print(m)
+        
+        //使用..<来创造一个序列区间(..<不包含最大值的区间,...包含最大值和最小值的区间)
+        var firstForLoop = 0
+        for i in 0..<4 {
+            firstForLoop += i
+        }
+        print(firstForLoop)
     }
 }
