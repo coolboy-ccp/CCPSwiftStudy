@@ -38,6 +38,7 @@ class FirstDay: NSObject {
         }
         let numbers = [20,30,15,7];
         print(self.functionAs(numbers, condition: lessThan))
+        self.biBao()
     }
     //swift真心强，常量和变量名几乎能用任何字符
     func changeValue() {
@@ -258,5 +259,17 @@ class FirstDay: NSObject {
     }
     
     //闭包：一段可以被随后调用的代码块
-   
+    func biBao() {
+        let strings = ["hahah","heiheh"]
+        print(strings.map({(asTr: String) -> String in return asTr + "闭包"}))
+        let anumbers = [11,12,13,15]
+        print(anumbers.map{
+            (number: Int) -> Int in
+            let result = 3 * number
+            return result
+            })
+        print(anumbers.map({number in 2 * number}))
+        //$1 > $0升序, $1 < $0 降序
+        print(strings.sort{$1 > $0})
+    }
 }
