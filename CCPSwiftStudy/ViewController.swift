@@ -8,9 +8,14 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let first = FirstDay();
+        first.changeValue();
+        first.someAboutArrayAndDictionary()
+        first.someAboutString()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

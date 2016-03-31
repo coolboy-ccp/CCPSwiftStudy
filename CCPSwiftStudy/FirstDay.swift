@@ -52,5 +52,41 @@ class FirstDay: NSObject {
     我是第二个多行注释
     */
     */
+    func someAboutString() {
+        //\(***)可以添加
+        let apples = 3;
+        let appleSummary = "I have \(apples) apples"
+        print(appleSummary)
+        //使用+拼接时必须保证类型一致，swift是强类型语言，不同类型不能相加
+        let label = "The width is"
+        let width = 94
+        let labelWidth = label + String(width)
+        print(labelWidth)
+        
+    }
+    
+    func someAboutArrayAndDictionary() {
+        //array
+        var shoppingList = ["catfish","water","tulips","blue paint"]
+        shoppingList[1] = "bottle of water"
+        print(shoppingList)
+        
+        //dictionary
+        var occupations = ["Malcolm":"Captain","Kaylee":"Mechanic"]
+        occupations["Jayene"] = "Public relations"
+        print(occupations)
+        
+        var emptyArray = [String]()
+        var emptyDictionary = [String:Float]()
+        emptyArray = ["arr"]
+        emptyDictionary = ["arr":12.0]
+        print(emptyDictionary)
+        print(emptyArray)
+        let emptyArray1 = []
+        let emptyDictionary1 = [:]
+        print(emptyArray1)
+        print(emptyDictionary1)
+        
+    }
     
 }
