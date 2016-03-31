@@ -27,6 +27,17 @@ class FirstDay: NSObject {
         self.someAboutString()
         self.someAboutArrayAndDictionary()
         self.controlStyle()
+        print(self.greet("developer", day:"2016-3-31"))
+        print(self.calculateStatistics([1,3,5,7,9,11,45]))
+        print(self.avaOf())
+        print(self.avaOf(12,13,15))
+        let increement = returnAFunction()
+        print(increement(1))
+        func lessThan(number: Int) -> Bool {
+            return number < 10;
+        }
+        let numbers = [20,30,15,7];
+        print(self.functionAs(numbers, condition: lessThan))
     }
     //swift真心强，常量和变量名几乎能用任何字符
     func changeValue() {
@@ -176,4 +187,76 @@ class FirstDay: NSObject {
         }
         print(firstForLoop)
     }
+    
+    /*
+    函数：
+    声明：func
+    参数：(name:class)
+    返回值:->class
+    */
+    func greet(name: String,day:String) -> String {
+        return "Hello \(name),today is\(day)"
+    }
+    //元祖 (name:class,name1:class1,name2:clasee2)
+    func calculateStatistics(scores: [Int]) -> (min: Int,max: Int,ava:Float) {
+        var min = scores[0],max = scores[0],ava: Float = 0;
+        for score in scores {
+            if score > max {
+                max = score
+            }
+            else if score < min {
+                min = score
+            }
+            ava += Float(score)
+        }
+        ava = ava/Float(scores.count)
+        return(min,max,ava)
+    }
+    
+    //函数可以接受不确定的参数
+    func avaOf(numbers: Float...) ->Float {
+        var ava:Float = 0;
+        for number in numbers {
+            ava += number
+        }
+        if numbers.count > 0 {
+            ava = ava / Float(numbers.count)
+        }
+        else {
+            print("input some numbers")
+        }
+        self .returnANumber()
+        return ava
+    }
+    
+    //函数可以内嵌
+    func returnANumber() -> Int {
+        var y = 10
+        func add() {
+            y += 15
+        }
+        print(y)
+        return y
+    }
+    
+    //函数可以作为返回值
+    func returnAFunction() -> (Int ->Int) {
+        func addOne(number: Int) ->Int {
+            return 20 + number
+        }
+        return addOne
+    }
+    
+    //函数可以作为参数
+    func functionAs(list: [Int], condition: Int -> Bool) ->Bool {
+        for item in list {
+            if condition(item) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    //闭包：一段可以被随后调用的代码块
+   
 }
