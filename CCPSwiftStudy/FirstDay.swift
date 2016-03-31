@@ -22,6 +22,12 @@ class FirstDay: NSObject {
     let happy = "happy"
     let minInt16Value = Int16.min
     let maxInt16Value = Int16.max
+    func achieveFuction() {
+        self.changeValue();
+        self.someAboutString()
+        self.someAboutArrayAndDictionary()
+        self.controlStyle()
+    }
     //swift真心强，常量和变量名几乎能用任何字符
     func changeValue() {
         currentNumber = x + y
@@ -52,6 +58,8 @@ class FirstDay: NSObject {
     我是第二个多行注释
     */
     */
+    
+    //字符串
     func someAboutString() {
         //\(***)可以添加
         let apples = 3;
@@ -64,7 +72,7 @@ class FirstDay: NSObject {
         print(labelWidth)
         
     }
-    
+    //字典和数组
     func someAboutArrayAndDictionary() {
         //array
         var shoppingList = ["catfish","water","tulips","blue paint"]
@@ -86,7 +94,41 @@ class FirstDay: NSObject {
         let emptyDictionary1 = [:]
         print(emptyArray1)
         print(emptyDictionary1)
-        
     }
-    
+    //控制流
+    /*
+    if,switch做逻辑判断,for-in,for,while,repeat-while做循环。不强制用小括号括起来条件，但是花括号是必须的
+     */
+    func controlStyle() {
+        let individualScores = [75,43,103,87,12,33]
+        var teamSore = 0;
+        for score in individualScores {
+            //在if语句中，条件必须是布尔表达式，不再隐式与零做计算
+            if score > 50 {
+                teamSore += 3
+            }
+            else {
+                teamSore += 1
+            }
+        }
+        print(teamSore)
+        
+        //?表示可选类型，包括一个值和一个nil
+        let optionalString: String? = "optionalString"
+        print(optionalString == nil)
+        
+        
+        //如果optionalName为nil则if会被跳过
+        let optionalName: String? = "John"
+        var greeting = "Hello"
+        if let name = optionalName {
+            greeting = "Hello,\(name)"
+        }
+        print(greeting)
+        
+        let nickName:String? = nil
+        let fullName:String = "John"
+        let informalGreeting = "hi\(nickName ?? fullName)"
+        print(informalGreeting)
+    }
 }
