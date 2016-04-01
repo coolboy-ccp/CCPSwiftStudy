@@ -22,6 +22,7 @@ class FirstDay: NSObject {
     let happy = "happy"
     let minInt16Value = Int16.min
     let maxInt16Value = Int16.max
+    
     func achieveFuction() {
         self.changeValue();
         self.someAboutString()

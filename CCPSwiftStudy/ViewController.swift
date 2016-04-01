@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         first.achieveFuction()
         let animation: ASampleAnimation? = ASampleAnimation(name: "animation",frame: self.view.bounds)
         let sidelength = animation?.sideLength
+        self.view.addSubview(animation!)
         print(sidelength)
         // Do any additional setup after loading the view, typically from a nib.
     }
