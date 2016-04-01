@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let first = FirstDay();
         first.achieveFuction()
+        let animation: ASampleAnimation? = ASampleAnimation(name: "animation",frame: self.view.bounds)
+        let sidelength = animation?.sideLength
+        print(sidelength)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

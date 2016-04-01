@@ -10,15 +10,29 @@ import UIKit
 
 
 class ASampleAnimation: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    //orerride表示继承父类的方法
+    var sideLength: Double = 0.0 //属性的声明
+    var name: String = ""
+    //get,set方法声明属性
+    var perimeter: Double {
+        get {
+            return 3.0 * sideLength
+        }
+        set {
+            sideLength = newValue / 3.0
+        }
+    }
+    
+     init(name: String,frame: CGRect){
+      super.init(frame: frame)
+      self.name  = name
+      print("\(self.name) : \(self.frame)")
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
+     required init?(coder aDecoder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+     }
+    
 
     /*
     // Only override drawRect: if you perform custom drawing.
