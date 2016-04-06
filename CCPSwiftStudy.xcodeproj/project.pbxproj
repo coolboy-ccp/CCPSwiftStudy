@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0013AAA81CB38CE40027A295 /* MyFlashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */; };
+		0013AAAC1CB3C42E0027A295 /* BBFlashCtntLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0013AAAB1CB3C42E0027A295 /* BBFlashCtntLabel.m */; };
 		001E0C761CAA740700C5B943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E0C751CAA740700C5B943 /* AppDelegate.swift */; };
 		001E0C781CAA740700C5B943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E0C771CAA740700C5B943 /* ViewController.swift */; };
 		001E0C7B1CAA740700C5B943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001E0C791CAA740700C5B943 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFlashLabel.swift; sourceTree = "<group>"; };
+		0013AAA91CB3C42D0027A295 /* CCPSwiftStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCPSwiftStudy-Bridging-Header.h"; sourceTree = "<group>"; };
+		0013AAAA1CB3C42E0027A295 /* BBFlashCtntLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFlashCtntLabel.h; sourceTree = "<group>"; };
+		0013AAAB1CB3C42E0027A295 /* BBFlashCtntLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFlashCtntLabel.m; sourceTree = "<group>"; };
 		001E0C721CAA740700C5B943 /* CCPSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCPSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		001E0C751CAA740700C5B943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		001E0C771CAA740700C5B943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,11 +67,15 @@
 				001E0C751CAA740700C5B943 /* AppDelegate.swift */,
 				001E0C771CAA740700C5B943 /* ViewController.swift */,
 				001E0C871CAA758E00C5B943 /* FirstDay.swift */,
+				0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */,
 				00E5857E1CACFAA700D1255C /* ASampleAnimation.swift */,
+				0013AAAA1CB3C42E0027A295 /* BBFlashCtntLabel.h */,
+				0013AAAB1CB3C42E0027A295 /* BBFlashCtntLabel.m */,
 				001E0C791CAA740700C5B943 /* Main.storyboard */,
 				001E0C7C1CAA740700C5B943 /* Assets.xcassets */,
 				001E0C7E1CAA740700C5B943 /* LaunchScreen.storyboard */,
 				001E0C811CAA740700C5B943 /* Info.plist */,
+				0013AAA91CB3C42D0027A295 /* CCPSwiftStudy-Bridging-Header.h */,
 			);
 			path = CCPSwiftStudy;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0013AAAC1CB3C42E0027A295 /* BBFlashCtntLabel.m in Sources */,
+				0013AAA81CB38CE40027A295 /* MyFlashLabel.swift in Sources */,
 				00E5857F1CACFAA700D1255C /* ASampleAnimation.swift in Sources */,
 				001E0C881CAA758E00C5B943 /* FirstDay.swift in Sources */,
 				001E0C781CAA740700C5B943 /* ViewController.swift in Sources */,
@@ -255,10 +267,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CCPSwiftStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCPSwiftStudy/CCPSwiftStudy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -266,10 +281,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CCPSwiftStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCPSwiftStudy/CCPSwiftStudy-Bridging-Header.h";
 			};
 			name = Release;
 		};

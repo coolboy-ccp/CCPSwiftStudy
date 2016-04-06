@@ -15,17 +15,7 @@ class ASampleAnimation: UIView {
     var name: String = ""
     var alayer: CALayer
     var isTouch: Bool = false
-    //get,set方法声明属性
-    var perimeter: Double {
-        get {
-            return 3.0 * sideLength
-        }
-        set {
-            sideLength = newValue / 3.0
-        }
-    }
-    
-     init(name: String,frame: CGRect){
+    init(name: String,frame: CGRect){
         self.alayer = CALayer()
         super.init(frame: frame)
         self.name  = name
@@ -35,10 +25,15 @@ class ASampleAnimation: UIView {
         alayer.backgroundColor = UIColor.redColor().CGColor
         alayer.cornerRadius = 50
         self.layer.addSublayer(alayer);
-      let square = Square(sideLength: 15.2, name: "square")
-      square.area()
-      print(square.simpleDescription())
-      print("\(self.name) : \(self.frame)")
+        let square = Square(sideLength: 15.2, name: "square")
+        let triangleAndSquare = TriangleAndSquare(size: 12, name: "triangle and square")
+        print(triangleAndSquare.square.sideLength)
+        print(triangleAndSquare.triangle.sideLength)
+        triangleAndSquare.square = Square(sideLength: 50, name: "changeValue")
+        print(triangleAndSquare.triangle.sideLength)
+        square.area()
+        print(square.simpleDescription())
+        print("\(self.name) : \(self.frame)")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -85,5 +80,101 @@ class Square: namedShape {
         return "A squre with sides of length \(sideLength)"
     }
 }
+//let square: Square = Square(sideLength: 15.0, name: "square")
 
+class EquilateralTriangle: namedShape {
+    var sideLength: Double = 0.0
+    init(sideLength: Double,name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSizes = 3
+    }
+    
+    var perimeter: Double {
+        get {
+            return 3.0 * sideLength
+        }
+        set {
+            sideLength = newValue / 3.0
+        }
+    }
+    
+    override func simpleDescription() -> String {
+        return "An enquilateral triangle with sides of length \(sideLength) and perimeter \(perimeter)"
+    }
+}
 
+class TriangleAndSquare {
+    
+    //保证triangle和square的sidelength相等
+    var triangle: EquilateralTriangle {
+        willSet {
+           square.sideLength = newValue.sideLength
+        
+        }
+    }
+    var square: Square {
+        willSet {
+            let card = Card(rank: .Queen, suit: .Spades)
+            card.simpleDescaiption()
+            let ace = Rank.ACE
+            print("enum :\(ace.rawValue)")
+            let three = Rank.three
+            print("neum three : \(three)")
+            let jack = Rank.Jack
+            print("enum jack: \(jack)")
+            print("enum jack: \(jack.simpleDescription())")
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    init(size: Double,name: String) {
+        square = Square(sideLength: size, name: name)
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+    }
+}
+
+//枚举
+enum Rank: Int {
+    case ACE = 1
+    case two,three,four,five,six,seven,eight,night,nine,ten
+    case Jack,Queen,King
+    func simpleDescription() -> String {
+        switch self {
+        case .ACE:
+            return "ace"
+        case .Jack:
+            return"jack"
+        case .Queen:
+            return"queen"
+        case .King:
+            return"king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+
+enum Suit {
+    case Spades,Hearts,Diamonds,Clubs
+    func simpleDescirption() -> String {
+        switch self {
+        case.Spades:
+            return "spades"
+        case.Hearts:
+            return "hearts"
+        case.Diamonds:
+            return "diamonds"
+        case.Clubs:
+            return "clubs"
+        }
+    }
+}
+
+// 结构体
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    func simpleDescaiption(){
+        print("The \(rank.simpleDescription()) of \(suit.simpleDescirption())")
+    }
+}
