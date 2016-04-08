@@ -12,8 +12,6 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let first = FirstDay();
-        first.achieveFuction()
         let animation: ASampleAnimation? = ASampleAnimation(name: "animation",frame: self.view.bounds)
         let sidelength = animation?.sideLength
        // self.view.addSubview(animation!)

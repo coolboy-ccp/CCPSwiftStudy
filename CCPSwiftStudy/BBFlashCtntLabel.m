@@ -7,6 +7,7 @@
 //
 
 #import "BBFlashCtntLabel.h"
+#import "CCPSwiftStudy-Swift.h"
 
 @interface BBFlashCtntLabel()
 {
@@ -45,6 +46,9 @@
         self.repeatCount = 0;
         self.leastInnerGap = 10.f;
         self.clipsToBounds = YES;
+        //Swift
+        FirstDay *first = [[FirstDay alloc] init];
+        [first achieveFuction];
         [self setup];
     }
     return self;
