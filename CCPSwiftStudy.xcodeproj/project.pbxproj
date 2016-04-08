@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000F72A01CB74B160023404C /* MyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F729F1CB74B160023404C /* MyButtonView.swift */; };
 		0013AAA81CB38CE40027A295 /* MyFlashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */; };
 		0013AAAC1CB3C42E0027A295 /* BBFlashCtntLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0013AAAB1CB3C42E0027A295 /* BBFlashCtntLabel.m */; };
 		001E0C761CAA740700C5B943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E0C751CAA740700C5B943 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000F729F1CB74B160023404C /* MyButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButtonView.swift; sourceTree = "<group>"; };
 		0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFlashLabel.swift; sourceTree = "<group>"; };
 		0013AAA91CB3C42D0027A295 /* CCPSwiftStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCPSwiftStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		0013AAAA1CB3C42E0027A295 /* BBFlashCtntLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFlashCtntLabel.h; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				001E0C871CAA758E00C5B943 /* FirstDay.swift */,
 				0013AAA71CB38CE40027A295 /* MyFlashLabel.swift */,
 				00E5857E1CACFAA700D1255C /* ASampleAnimation.swift */,
+				000F729F1CB74B160023404C /* MyButtonView.swift */,
 				0013AAAA1CB3C42E0027A295 /* BBFlashCtntLabel.h */,
 				0013AAAB1CB3C42E0027A295 /* BBFlashCtntLabel.m */,
 				001E0C791CAA740700C5B943 /* Main.storyboard */,
@@ -157,6 +160,7 @@
 				001E0C881CAA758E00C5B943 /* FirstDay.swift in Sources */,
 				001E0C781CAA740700C5B943 /* ViewController.swift in Sources */,
 				001E0C761CAA740700C5B943 /* AppDelegate.swift in Sources */,
+				000F72A01CB74B160023404C /* MyButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
